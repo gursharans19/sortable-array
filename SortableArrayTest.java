@@ -30,4 +30,18 @@ public class SortableArrayTest {
         String[] sorted = SortableArray.sortStringsReverseAlphabetically(array);
         assertArrayEquals(new String[]{"cherry", "banana", "apple"}, sorted);
     }
+
+    @Test
+    public void testShuffleArray() {
+        int[] array = {1, 2, 3, 4, 5};
+        int[] shuffled = SortableArray.shuffleArray(array);
+        assertNotEquals(array, shuffled); // The shuffled array should not match the original
+    }
+
+    @Test
+    public void testReverseArray() {
+        int[] array = {1, 2, 3, 4, 5};
+        int[] reversed = SortableArray.reverseArray(array);
+        assertArrayEquals(new int[]{5, 4, 3, 2, 1}, reversed);
+    }
 }
