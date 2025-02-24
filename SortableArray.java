@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 
 public class SortableArray {
 
@@ -25,5 +26,17 @@ public class SortableArray {
             i++;
             j--;
         }
+    }
+
+    // Sort strings alphabetically
+    public static String[] sortStringsAlphabetically(String[] array) {
+        Arrays.sort(array);
+        return array;
+    }
+
+    // Sort strings in reverse alphabetical order
+    public static String[] sortStringsReverseAlphabetically(String[] array) {
+        Arrays.sort(array, Collections.reverseOrder());
+        return array;
     }
 }

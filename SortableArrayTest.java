@@ -16,4 +16,18 @@ public class SortableArrayTest {
         int[] sorted = SortableArray.sortIntegersDescending(array);
         assertArrayEquals(new int[]{5, 4, 3, 2, 1}, sorted);
     }
+
+    @Test
+    public void testSortStringsAlphabetically() {
+        String[] array = {"banana", "apple", "cherry"};
+        String[] sorted = SortableArray.sortStringsAlphabetically(array);
+        assertArrayEquals(new String[]{"apple", "banana", "cherry"}, sorted);
+    }
+
+    @Test
+    public void testSortStringsReverseAlphabetically() {
+        String[] array = {"banana", "apple", "cherry"};
+        String[] sorted = SortableArray.sortStringsReverseAlphabetically(array);
+        assertArrayEquals(new String[]{"cherry", "banana", "apple"}, sorted);
+    }
 }
