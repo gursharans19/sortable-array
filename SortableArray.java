@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class SortableArray {
 
@@ -38,5 +39,12 @@ public class SortableArray {
     public static String[] sortStringsReverseAlphabetically(String[] array) {
         Arrays.sort(array, Collections.reverseOrder());
         return array;
+    }
+
+    // Shuffle the array
+    public static int[] shuffleArray(int[] array) {
+        List<Integer> list = Arrays.asList(Arrays.stream(array).boxed().toArray(Integer[]::new));
+        Collections.shuffle(list);
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
